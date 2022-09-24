@@ -84,6 +84,6 @@ for i in (0..danhsachsv.size-1) do
   puts "Họ tên: #{danhsachsv[i].name}, Điểm trung bình: #{danhsachsv[i].diemtrungbinh}"
 end
 puts "Danh sách đã sắp xếp: "
-for i in (0..so rted_sv.size-1) do
+for i in (0..sorted_sv.size-1) do
   puts "Họ tên: #{sorted_sv[i].name}, Điểm trung bình: #{sorted_sv[i].diemtrungbinh}"
 end
