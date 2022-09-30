@@ -48,5 +48,9 @@ class QLCB
             end
         end
     end
-    def hienthi()
+    def hienthi(danhsachcb[])
+        for item indanhsachcb do
+            puts "Họ tên: #{item.hoten}, tuổi: #{item.tuoi}, Giới tính: #{item.gioitinh}, Địa chỉ: #{item.diachi}" 
+        end
+    end
 end
