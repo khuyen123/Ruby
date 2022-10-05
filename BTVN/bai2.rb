@@ -12,7 +12,7 @@ class TaiLieu
         @soban=gets.to_i
     end
     def show_info
-        pust "Mã tài liệu: #{@matlab}, Tên nhà xuất bản: #{@nxb}, Số bản phát hành: #{@soban}"
+        puts "Mã tài liệu: #{@matl}, Tên nhà xuất bản: #{@nxb}, Số bản phát hành: #{@soban}"
     end
     attr_accessor :matl, :nxb, :soban
 end
@@ -66,7 +66,7 @@ class QLTL
     def initialize
     end
     $tailieus= []
-    def addtailieu
+    def themtailieu
         puts "1. Nhập sách"
         puts "2. Nhập Báo"
         puts "3. Nhập Tạp chí"
@@ -78,7 +78,52 @@ class QLTL
                 elsif chon==3
                     tailieu=Tapchi.new
                 end
-                TaiLieu.nhap_tailieu
+                tailieu.nhap_tailieu
                 $tailieus<<tailieu
+    end
+    def hienthitailieu
+        puts "Danh sách tài liệu: "
+        $tailieus.each do |tailieu|
+            puts tailieu.show_info
+        end
+    end
+    def xoatailieu
+        print "Nhập mã tài liệu muốn xóa: "
+        xoa= gets.chomp
+        $tailieus.each do |tailieu|
+            if tailieu.matl==xoa
+                $tailieus.delete(tailieu)
+            end
+        end
+    end
+    def timkiem
+        # print "Nhập vào danh mục cần tìm: "
+        # timkiem= gets.chomp
+        # $tailieus.each do |tailieu|
+        #     if 
+    end
+end
+$count= true
+while $count
+    quanly= QLTL.new
+    puts"1. Thêm tài liệu: "
+    puts"2. Xóa tài liệu : "
+    puts"3. Hiển thị danh sách tài liệu: "
+    puts"4. Tìm kiếm: "
+    puts"5. Thoát!"
+    puts"Mời bạn chọn! "
+    chon2=gets.to_i
+    case chon2 
+    when 1 
+        quanly.themtailieu
+    when 2 
+        quanly.xoatailieu
+    when 3
+        quanly.hienthitailieu
+    when 4
+        quanly.timkiem
+    when 5
+        puts"Chào bạn!"
+        $count=false
     end
 end
