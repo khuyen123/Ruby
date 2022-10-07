@@ -109,7 +109,7 @@ end
 $continute = true
 while $continute
 
-    quanly = QLCB.new
+    quanly_231 = QLCB.new
     puts "1. thêm mới cán bộ."
     puts "2. Tìm kiếm theo tên."
     puts "3. Hiện thị thông tin danh sách cán bộ ."
@@ -119,11 +119,11 @@ while $continute
 
     case choose
     when 1
-        quanly.addCanbo
+        quanly_231.addCanbo
     when 2
        puts "little child"
     when 3
-        quanly.infomatinon
+        quanly_231.infomatinon
     else
        puts "Xin tạm biệt!"
         $continute = false

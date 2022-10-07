@@ -105,7 +105,7 @@ class QLTL
 end
 $count= true
 while $count
-    quanly= QLTL.new
+    quanly_231= QLTL.new
     puts"1. Thêm tài liệu: "
     puts"2. Xóa tài liệu : "
     puts"3. Hiển thị danh sách tài liệu: "
@@ -115,13 +115,13 @@ while $count
     chon2=gets.to_i
     case chon2 
     when 1 
-        quanly.themtailieu
+        quanly_231.themtailieu
     when 2 
-        quanly.xoatailieu
+        quanly_231.xoatailieu
     when 3
-        quanly.hienthitailieu
+        quanly_231.hienthitailieu
     when 4
-        quanly.timkiem
+        quanly_231.timkiem
     when 5
         puts"Chào bạn!"
         $count=false

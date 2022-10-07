@@ -131,7 +131,7 @@ end
 end
 $count =true
 while $count
-    quanly= QLPTGT.new
+    quanly_231= QLPTGT.new
     puts"1. Thêm phương tiện: "
     puts"2. Xóa phương tiẹn : "
     puts"3. Hiển thị danh sách phương tiện: "
@@ -141,13 +141,13 @@ while $count
     chon2=gets.to_i
     case chon2
     when 1 
-        quanly.themphuongtien
+        quanly_231.themphuongtien
     when 2
-        quanly.xoaphuongtien
+        quanly_231.xoaphuongtien
     when 3
-        quanly.hienthiphuongtien
+        quanly_231.hienthiphuongtien
     when 4
-        quanly.timkiem
+        quanly_231.timkiem
     when 5
         puts "Chào bạn!"
         $count=false
