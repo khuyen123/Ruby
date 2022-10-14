@@ -1,25 +1,19 @@
-class KhuPho
+class HoGiaDinh
     $hodans= []
     def initialize
     end
     def themhodan
-            print "Nhập vào n số hộ dân: "
-            n=gets.to_i
-            for i in 1..@
             print "Nhập vào số thành viên trong gia đình:"
             @stv= gets.to_i
-            print "Nhập vào họ tên: "
-            @hoten =gets.chomp 
-            print "Nhập vào địa chỉ: "
-            @diachi =gets.chomp
-            print "Nhập vào mức độ ưu tiên: 1-4"
-            @uutien =gets.to_i
+            print "Nhập vào số nhà: "
+            @sonha =gets.chomp 
+           
         end
     end
     def hienthi
-        puts "Số báo danh: #{@sbd}, Họ tên: #{@hoten}, Địa chỉ: #{@diachi}, Độ ưu tiên: #{@uutien}"
+        puts "Số thành viên : #{@stv}, Số nhà: #{@sonha}"
     end
-    attr_accessor :sbd, :hoten, :diachi, :uutien
+    attr_accessor :stv, :sonha
 end
 Class KhoiA < Thisinh
     def initialize
